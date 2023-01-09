@@ -1,0 +1,19 @@
+﻿<div class="col">
+    <div class="card rounded-3 customer-card">
+        <div class="card-header py-3">
+            <h4>@Customer.FirstName @Customer.LastName</h4>
+        </div>
+        <div class="card-body customer-card text-center">
+            <button class="btn btn-primary btn-sm mb-1" @onclick="@(async () =>
+await CustomerQuickViewClicked.InvokeAsync(Customer))">
+                Quick view
+            </button>
+            <a href="@($"customerdetail/{Customer.CustomerId}")" class="btn btn-outline-primary btn-sm mb-1">
+                Full details link
+            </a>
+            <button class="btn btn-outline-primary btn-sm mb-1" @onclick="(() => NavigateToDetails(Customer))">
+                Full details Button
+            </button>
+            </div>
+    </div>
+</div>

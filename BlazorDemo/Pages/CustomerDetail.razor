@@ -1,0 +1,48 @@
+﻿@page "/customerdetail/{CustomerId}"
+
+<section class="customer-detail">
+    <h1 class="page-title">Details for @Customer.FirstName @Customer.LastName</h1>
+    <br />
+    <div class="col-12 row">
+        <div class="col-10 row">
+            <div class="col-12 col-xxl-8">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Customer ID</label>
+                    <div class="col-sm-8">
+                        <label type="text" class="form-control-plaintext">@Customer.CustomerId</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">First name</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Customer.FirstName</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Last name</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Customer.LastName</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Birthdate</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Customer.BirthDate.ToShortDateString()</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Customer.Email</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xxl-4">
+            </div>
+        </div>
+    </div>
+</section>
+

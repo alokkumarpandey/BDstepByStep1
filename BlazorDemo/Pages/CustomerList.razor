@@ -1,0 +1,21 @@
+﻿@page "/customerlist"
+
+<h3>Customer List</h3>
+@if (Customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <CustomerPopup Customer="_selectedCustomer"></CustomerPopup>
+    <div class="row">
+        @foreach (var customer in Customers)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <CustomerCard Customer="customer"
+                      CustomerQuickViewClicked="ShowCustomerPopup">
+                </CustomerCard>
+            </div>
+        }
+    </div>
+}
